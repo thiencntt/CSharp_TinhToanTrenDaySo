@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             label1 = new Label();
             label2 = new Label();
@@ -46,7 +47,9 @@
             txtTotalChan = new TextBox();
             txtTotalLe = new TextBox();
             btnTinhToan = new Button();
+            errorProvider1 = new ErrorProvider(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -91,7 +94,7 @@
             // 
             label4.AutoSize = true;
             label4.ForeColor = Color.DarkBlue;
-            label4.Location = new Point(372, 42);
+            label4.Location = new Point(421, 42);
             label4.Name = "label4";
             label4.Size = new Size(105, 23);
             label4.TabIndex = 1;
@@ -106,7 +109,7 @@
             // 
             // txtEndNum
             // 
-            txtEndNum.Location = new Point(483, 39);
+            txtEndNum.Location = new Point(532, 39);
             txtEndNum.Name = "txtEndNum";
             txtEndNum.Size = new Size(65, 30);
             txtEndNum.TabIndex = 3;
@@ -204,6 +207,10 @@
             btnTinhToan.UseVisualStyleBackColor = true;
             btnTinhToan.Click += btnTinhToan_Click;
             // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 23F);
@@ -231,6 +238,7 @@
             Name = "Form1";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -254,5 +262,6 @@
         private TextBox txtTotalChan;
         private TextBox txtTotalLe;
         private Button btnTinhToan;
+        private ErrorProvider errorProvider1;
     }
 }

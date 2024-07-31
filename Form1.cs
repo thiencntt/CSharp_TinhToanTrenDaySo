@@ -10,6 +10,30 @@ namespace CSharp_TinhToanTrenDaySo
         private void btnTinhToan_Click(object sender, EventArgs e)
         {
             // Sua code
+            errorProvider1.Clear();
+
+            
+            if (!double.TryParse(txtStartNum.Text, out _))
+            {
+                errorProvider1.SetError(txtStartNum, "Phải nhập số thập phân");
+                return;
+            }
+            if (!double.TryParse(txtEndNum.Text, out _))
+            {
+                errorProvider1.SetError(txtEndNum, "Phải nhập số thập phân");
+                return;
+            }
+            if(string.IsNullOrEmpty(txtStartNum.Text))
+            {
+                errorProvider1.SetError(txtStartNum, "Phải nhập giá trị vào ô này");
+                return;
+            }
+            if (string.IsNullOrEmpty(txtEndNum.Text))
+            {
+                errorProvider1.SetError(txtEndNum, "Phải nhập giá trị vào ô này");
+                return;
+            }
+            
 
             double startNum = Convert.ToDouble(txtStartNum.Text);
             double endNum = Convert.ToDouble(txtEndNum.Text);
