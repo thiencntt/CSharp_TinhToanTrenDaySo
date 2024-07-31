@@ -9,6 +9,7 @@ namespace CSharp_TinhToanTrenDaySo
 
         private void btnTinhToan_Click(object sender, EventArgs e)
         {
+            // Sua code
 
             double startNum = Convert.ToDouble(txtStartNum.Text);
             double endNum = Convert.ToDouble(txtEndNum.Text);
